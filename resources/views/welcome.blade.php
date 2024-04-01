@@ -1,657 +1,579 @@
-<!DOCTYPE html>
+<!-- /*
+* Template Name: Financing
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
 
-  <title>JRP Insurance Lampung</title>
-  <meta content="Pemasaran produk dari PT Jasa" name="description">
-  <meta content="" name="keywords">
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
 
-  <!-- Favicons -->
-  <link href="assets/img/jrpLogo.png" rel="icon">
-  <link href="assets/img/jrpLogo.png" rel="apple-touch-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="{{ asset('fonts/icomoon/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-  <!-- =======================================================
-  * Template Name: Arsha
-  * Updated: Jan 09 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+	<link rel="stylesheet" href="{{ asset('css/tiny-slider.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/glightbox.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+	<link rel="stylesheet" href="{{ asset('css/flatpickr.min.css') }}">
+
+
+	<title>Jasa Raharja Putera</title>
 </head>
-
 <body>
-  <div id="preloader"></div>
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Jasaraharja Putera</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
 
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#portfolio">Product</a></li>
-          <li><a class="nav-link scrollto" href="#team">Organization</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto" href="#">Admin Login</a></li>
-          {{-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> --}}
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
+	<nav class="site-nav">
+		<div class="container">
+			<div class="menu-bg-wrap">
+				<div class="site-navigation">
+					<div class="row g-0 align-items-center">
+						<div class="col-2" style="background: #ffffff; border-radius: 0.25rem;">
+							<a href="{{url('')}}" class="logo m-0 float-start"><img src="{{ asset('images/output-onlinegiftools.gif') }}" class="img-fluid" style="width: 250px;"></a>
+						</div>
+						<div class="col-8 text-center ">
+							<ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
+								<li class="active"><a href="{{url('')}}">Home</a></li>
+								<li><a href="{{url('produk')}}">Produk</a></li>
+								<li><a href="{{url('layanan')}}">Layanan</a></li>
+								<li class="has-children">
+											<a href="#">Tentang Kami</a>
+											<ul class="dropdown">
+												<li><a href="{{url('sejarah')}}">Sejarah</a></li>
+												<li><a href="{{url('visimisi')}}">Visi Misi</a></li>
+												<li><a href="{{url('struktur')}}">Struktur Organisasi</a></li>
+											</ul>
+										</li>
+								<li><a href="{{route('login')}}">Masuk</a></li>
+							</ul>
+						</div>
+						<div class="col-2 text-end">
+							<a href="#" class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
+								<span></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
 
+	<div class="hero overlay" >
+		<img src="{{ asset('images/blob.svg') }}" alt="" class="img-fluid blob">
+		<div class="container">
+			<div class="row align-items-center justify-content-between pt-5">
+				<div class="col-lg-6 text-center text-lg-start pe-lg-5">
+					<h1 class="heading text-white mb-3" data-aos="fade-up">PERUSAHAAN ASURANSI TERKEMUKA</h1>
+					<p class="text-white mb-5" data-aos="fade-up" data-aos-delay="100">Didirikan pada 27 November 1993 di Jakarta , telah memberikan layanan asuransi yang luas kepada masyarakat di seluruh Indonesia selama lebih dari dua dasawarsa.</p>
+					<div class="align-items-center mb-5 mm" data-aos="fade-up" data-aos-delay="200">
+						<a href="contact.html" class="btn btn-outline-white-reverse me-4">Kontak kami</a>
+					</div>
+				</div>
+				<div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+					<div class="img-wrap">
+						<img src="{{ asset('images/logo.png') }}" alt="Image" class="img-fluid rounded" style="background-color: #ffffff;">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- <div class="section">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-7 mb-4 mb-lg-0">
+					<img src="{{ asset('images/img-3.jpg') }}" alt="Image" class="img-fluid rounded
+					">
+				</div>
+				<div class="col-lg-4 ps-lg-2">
+					<div class="mb-5">
+						<h2 class="text-black h4">Make payment fast and smooth.</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+					</div>
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-wallet-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Build financial</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-pie-chart-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Invest for the future</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="section sec-features">
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+					<div class="feature d-flex">
+						<span class="bi-bag-check-fill"></span>
+						<div>
+							<h3>Build financial</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="feature d-flex">
+						<span class="bi-wallet-fill"></span>
+						<div>
+							<h3>Invest for the future</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="feature d-flex">
+						<span class="bi-pie-chart-fill"></span>
+						<div>
+							<h3>Responsible banking</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 order-lg-2 mb-4 mb-lg-0">
+					<img src="{{ asset('images/img-1.jpg') }}" alt="Image" class="img-fluid">
+				</div>
+				<div class="col-lg-5 pe-lg-5">
+					<div class="mb-5">
+						<h2 class="text-black h4">Straight-forward way of financing</h2>
+					</div>
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-wallet-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Build financial</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-pie-chart-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Invest for the future</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-bag-check-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Responsible banking</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->>
+
+
+<div class="section sec-services">
+	<!-- <div class="container">
+		<div class="row mb-5">
+			<div class="col-lg-5 mx-auto text-center" data-aos="fade-up">
+				<h2 class="heading text-primary">Our Services</h2>
+				<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up">
+
+				<div class="service text-center">
+					<span class="bi-cash-coin"></span>
+					<div>
+						<h3>Faster payments</h3>
+						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p><a href="#" class="btn btn-outline-primary py-2 px-3">Read more</a></p>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="service text-center">
+					<span class="bi-chat-text"></span>
+					<div>
+						<h3>Grow your business</h3>
+						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p><a href="#" class="btn btn-outline-primary py-2 px-3">Read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="service text-center">
+					<span class="bi-fingerprint"></span>
+					<div>
+						<h3>Investments</h3>
+						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p><a href="#" class="btn btn-outline-primary py-2 px-3">Read more</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+				<div class="service text-center">
+					<span class="bi-gear"></span>
+					<div>
+						<h3>Payment & Cards</h3>
+						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p><a href="#" class="btn btn-outline-primary py-2 px-3">Read more</a></p>
+					</div>
+				</div>
+
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="service text-center">
+					<span class="bi-graph-up-arrow"></span>
+					<div>
+						<h3>Strategic Finance</h3>
+						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p><a href="#" class="btn btn-outline-primary py-2 px-3">Read more</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="service text-center">
+					<span class="bi-layers"></span>
+					<div>
+						<h3>Digital Currency</h3>
+						<p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p><a href="#" class="btn btn-outline-primary py-2 px-3">Read more</a></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div> -->
+</div>
+
+
+<div class="section sec-cta overlay" style="background-image: url('images/img-3.jpg')">
+	<div class="container">
+		<div class="row justify-content-between align-items-center">
+			<div class="col-lg-5" data-aos="fade-up" data-aos-delay="0">
+				<h2 class="heading">Perlu hubungi kami?</h2>
+			</div>
+			<div class="col-lg-5 text-end" data-aos="fade-up" data-aos-delay="100">
+				<a href="#" class="btn btn-outline-white-reverse">Kontak Kami</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- <div class="section sec-portfolio bg-light pb-5	">
+	<div class="container">
+		<div class="row mb-5">
+			<div class="col-lg-5 mx-auto text-center ">
+				<h2 class="heading text-primary mb-3" data-aos="fade-up" data-aos-delay="0">Case Studies</h2>
+				<p class="mb-4" data-aos="fade-up" data-aos-delay="100">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+
+				<div id="post-slider-nav" data-aos="fade-up" data-aos-delay="200">
+					<button class="btn btn-primary py-2" class="prev" data-controls="prev">Prev</button>
+					<button class="btn btn-primary py-2" class="next" data-controls="next">Next</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="post-slider-wrap" data-aos="fade-up" data-aos-delay="300">
+
+
+
+		<div id="post-slider" class="post-slider">
+			<div class="item">
+				<a href="case-study.html" class="card d-block">
+					<img src="{{ asset('images/img-1.jpg') }}" class="card-img-top" alt="Image">
+					<div class="card-body">
+						<h5 class="card-title">Behind the word mountains</h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="case-study.html" class="card">
+					<img src="{{ asset('images/img-2/jpg') }}" class="card-img-top" alt="Image">
+					<div class="card-body">
+						<h5 class="card-title">Behind the word mountains</h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="case-study.html" class="card">
+					<img src="{{ asset('images/img-3.jpg') }}" class="card-img-top" alt="Image">
+					<div class="card-body">
+						<h5 class="card-title">Behind the word mountains</h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="case-study.html" class="card">
+					<img src="{{ asset('images/img-4.jpg') }}" class="card-img-top" alt="Image">
+					<div class="card-body">
+						<h5 class="card-title">Behind the word mountains</h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</a>
+			</div>
+
+			<div class="item">
+				<a href="case-study.html" class="card">
+					<img src="{{ asset('images/img-1.jpg') }}" class="card-img-top" alt="Image">
+					<div class="card-body">
+						<h5 class="card-title">Behind the word mountains</h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+
+<div class="section sec-testimonial bg-light">
+	<div class="container">
+		<div class="row mb-5 justify-content-center">
+			<div class="col-lg-6 text-center">
+				<h2 class="heading text-primary">Testimonials</h2>
+			</div>
+
+		</div>
+
+
+		<div class="testimonial-slider-wrap">
+			<div class="testimonial-slider" id="testimonial-slider">
+				<div class="item">
+					<div class="testimonial-half d-lg-flex bg-white">
+						<div class="img" style="background-image: url('images/img-4.jpg')">
+
+						</div>
+						<div class="text">
+							<blockquote>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							</blockquote>
+							<div class="author">
+								<strong class="d-block text-black">John Campbell</strong>
+								<span>CEO & Co-founder</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="testimonial-half d-lg-flex bg-white">
+						<div class="img" style="background-image: url('images/img-3.jpg')">
+
+						</div>
+						<div class="text">
+							<blockquote>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							</blockquote>
+							<div class="author">
+								<strong class="d-block text-black">John Campbell</strong>
+								<span>CEO & Co-founder</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="item">
+					<div class="testimonial-half d-lg-flex bg-white">
+						<div class="img" style="background-image: url('images/img-2.jpg')">
+
+						</div>
+						<div class="text">
+							<blockquote>
+								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+							</blockquote>
+							<div class="author">
+								<strong class="d-block text-black">John Campbell</strong>
+								<span>CEO & Co-founder</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+
+<div class="section sec-news">
+	<!-- <div class="container">
+		<div class="row mb-5">
+			<div class="col-lg-7">
+				<h2 class="heading text-primary">Latest News</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="card post-entry">
+					<a href="single.html"><img src="{{ asset('images/img-1.jpg') }}" class="card-img-top" alt="Image"></a>
+					<div class="card-body">
+						<div><span class="text-uppercase font-weight-bold date">Jan 20, 2021</span></div>
+						<h5 class="card-title"><a href="single.html">Behind the word mountains</a></h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p class="mt-5 mb-0"><a href="#">Read more</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card post-entry">
+					<a href="single.html"><img src="{{ asset('images/img-2.jpg') }}" class="card-img-top" alt="Image"></a>
+					<div class="card-body">
+						<div><span class="text-uppercase font-weight-bold date">Jan 20, 2021</span></div>
+						<h5 class="card-title"><a href="single.html">Behind the word mountains</a></h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p class="mt-5 mb-0"><a href="#">Read more</a></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4">
+				<div class="card post-entry">
+					<a href="single.html"><img src="{{ asset('images/img-3.jpg') }}" class="card-img-top" alt="Image"></a>
+					<div class="card-body">
+						<div><span class="text-uppercase font-weight-bold date">Jan 20, 2021</span></div>
+						<h5 class="card-title"><a href="single.html">Behind the word mountains</a></h5>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+						<p class="mt-5 mb-0"><a href="single.html">Read more</a></p>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div> -->
+</div>
+
+<div class="site-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4">
+				<div class="widget">
+					<h3>Tentang</h3>
+					<p>JRP-INSURANCE sebagai afiliasi Indonesia Financial Group (IFG) menerapkan Core Value AKHLAK yaitu Amanah, Kompeten, Harmonis, Loyal, Adaptif dan Kolaboratif.</p>
+				</div> <!-- /.widget -->
+				<div class="widget">
+					<address>Jalan Diponegoro 59 B-c 35212 Kota Bandar Lampung</address>
+				</div> <!-- /.widget -->
+			</div> <!-- /.col-lg-4 -->
+			<div class="col-lg-4">
+				<div class="widget">
+				</div> <!-- /.widget -->
+			</div> <!-- /.col-lg-4 -->
+			<div class="col-lg-4">
+				<div class="widget">
+					<h3>Sosial</h3>
+					<ul class="list-unstyled social">
+						<li><a href="https://www.instagram.com/jrp_insurance/"><span class="icon-instagram"></span></a></li>
+						<li><a href="https://twitter.com/pt_jasaraharja"><span class="icon-twitter"></span></a></li>
+						<li><a href="https://www.facebook.com/pages/PT.%20Jasa%20Raharja%20Putra/1730389286995996/"><span class="icon-facebook"></span></a></li>
+						<li><a href="https://www.linkedin.com/company/pt--jasaraharja-putera"><span class="icon-linkedin"></span></a></li>
+					</ul>
+				</div> <!-- /.widget -->
+			</div> <!-- /.col-lg-4 -->
+		</div> <!-- /.row -->
+
+		<div class="row mt-5">
+			<div class="col-12 text-center">
+					<!-- 
+              **==========
+              NOTE: 
+              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+              **==========
+            -->
+
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved.</p> <!-- License information: https://untree.co/license/ -->
+            </p>
+          </div>
+        </div>
+      </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+    	<div class="spinner-border text-primary" role="status">
+    		<span class="visually-hidden">Loading...</span>
+    	</div>
     </div>
-  </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Today for Tomorrow</h1>
-          <h2>Our company, reaching higher!</h2>
-          <div class="d-flex justify-content-center justify-content-lg-start">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://youtu.be/8qvee1ECsz4?si=90TzMZ81RogeI76k" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/Logo_JRP_Insurance.png" class="img-fluid animated" alt="">
-        </div>
-      </div>
-    </div>
+    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/tiny-slider.js') }}"></script>
 
-  </section><!-- End Hero -->
+    <script src="{{ asset('js/flatpickr.min.js') }}"></script>
 
-  <main id="main">
 
-    {{-- <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients section-bg">
-      <div class="container">
-
-        <div class="row" data-aos="zoom-in">
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
-          </div>
-
-          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
-            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Cliens Section --> --}}
-
-    <!-- ======= About Us Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>About Us</h2>
-        </div>
-
-        <div class="row content">
-          <div class="col-lg-6">
-            <p style="text-align: justify">
-                Berdiri pada tahun 1993, PT Asuransi Jasaraharja Putera atau JRP-INSURANCE yang merupakan Anak Usaha PT Jasa Raharja dalam waktu yang relatif 
-                singkat tumbuh menjadi salah satu perusahaan asuransi terkemuka di Indonesia. 
-                Hal ini tak lepas dari kuatnya kepercayaan yang diberikan stakeholder dan shareholder kepada Perseroan. 
-                Untuk itu JRP-INSURANCE senantiasa berkomitmen untuk menjaga kepercayaan dengan melakukan peningkatan kualitas pelayanan kepada para customer.
-            </p>
-            <p style="text-align: justify">
-                Saat ini, layanan JRP-INSURANCE dapat dinikmati di seluruh Indonesia melalui 111 Jaringan Pelayanan yang terdiri dari 
-                25 Kantor Cabang yang berada di daerah tingkat I provinsi, 27 Kantor Pemasaran yang berada di daerah tingkat II Kabupaten/Kota dan 
-                59 Kantor Unit Layanan yang berada di daerah Kabupaten/Kota. 
-            </p>
-            <p style="text-align: justify">
-                JRP-INSURANCE memberikan beragam solusi untuk Asuransi Umum Konvensional (Asuransi Non Jiwa Konvensional), 
-                Unit Syariah Asuransi Umum, Penjaminan Konvensional (Suretyship), Reasuransi Konvensional dan Portal web dan/atau platform digital
-                dengan tujuan komersial sesuai dengan Nomor Induk Berusaha (NIB) Nomor : 1235000211076 dan Akta Perusahaan, layanan yang beragam tersebut 
-                mencerminkan tekad JRP-INSURANCE untuk menjadi one stop insurance service company.
-            </p>
-            <p style="text-align: justify">
-                Komitmen  JRP-INSURANCE   dalam   menjaga   reputasinya sebagai perusahaan asuransi yang terpercaya tercermin dalam 
-                melakukan Tata Kelola Perusahaan Perasuransian yang Baik sesuai dengan nilai-nilai Good Corporate Governance (GCG) 
-                serta melakukan pernerapan ISO 370001-2016  Sistem Manajemen Anti Penyuapan (SMAP) dan secara rutin melakukan pemeringkatan 
-                dengan meraih rating <strong> idAA- </strong> (Double A minus Stable Outlook). 
-            </p>
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0">
-            <p style="text-align: justify">
-                JRP-INSURANCE sebagai afiliasi Indonesia Financial Group (IFG) menerapkan Core Value <strong> AKHLAK </strong>:
-            </p>
-            <ul>
-                <li style="font-weight: bold"><i class="ri-check-double-line"></i> Amanah</li>
-                <li style="font-weight: bold"><i class="ri-check-double-line"></i> Kompeten</li>
-                <li style="font-weight: bold"><i class="ri-check-double-line"></i> Harmonis</li>
-                <li style="font-weight: bold"><i class="ri-check-double-line"></i> Loyal</li>
-                <li style="font-weight: bold"><i class="ri-check-double-line"></i> Adaptif</li>
-                <li style="font-weight: bold"><i class="ri-check-double-line"></i> Kolaboratif </li>
-              </ul>
-            <p style="text-align: justify">
-                Dengan melakukan penerapan Tata Kelola Perusahaan Perasuransian yang baik serta implementasi Core Value <strong> AKHLAK </strong>, 
-                kami yakin JRP-INSURANCE semakin mendapat kepercayaan dari para nasabah dan mitra bisnis, sehingga mampu mengibarkan diri menjadi 
-                perusahaan asuransi terkemuka di Indonesia sesuai dengan Visi Perusahaan.
-            </p>
-            {{-- <a href="#" class="btn-learn-more">Learn More</a> --}}
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End About Us Section -->
-
-    <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
-      <div class="container-fluid" data-aos="fade-up">
-
-        <div class="row">
-
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
-
-            <div class="content">
-              <h3><strong>Kenapa Perlu Asuransi</strong></h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-            </div>
-
-            <div class="accordion-list">
-              <ul>
-                <li>
-                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
-                    <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> Feugiat scelerisque varius morbi enim nunc? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </p>
-                  </div>
-                </li>
-
-                <li>
-                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span> Dolor sit amet consectetur adipiscing elit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
-                    <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                  </div>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/insurance-illust2.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
-        </div>
-
-      </div>
-    </section><!-- End Why Us Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Product Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Product</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
-        </ul>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 1</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 2</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 2</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 2</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>App 3</h4>
-              <p>App</p>
-              <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 1</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Card 3</h4>
-              <p>Card</p>
-              <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt=""></div>
-            <div class="portfolio-info">
-              <h4>Web 3</h4>
-              <p>Web</p>
-              <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Organization</h2>
-          <h4>Struktur Organisasi Branch Office Tipe B </h4>
-          <h4>PT Jasaraharja Putera Branch Office Lampung</h4>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Manager.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Budi Santosa, SE</h4>
-                <span>Branch Manager</span>
-                {{-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
-                <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Marketing.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Risman, S.Komp</h4>
-                <span>Marketing Office</span>
-                <p>- Dwi Ayu Pritawaty, S.Si</p>
-                {{-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Business1.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Rakha Prisma Ardyan</h4>
-                <span>Business Section I</span>
-                <p>- Mutia Yasinta Bugis, S.Kom (PKWT)</p>
-                {{-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Business2.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Sri Dewi, SE, AAAIK</h4>
-                <span>Business Section II</span>
-                <p>- Faris Setiawan, S.T (PKWT)</p>
-                {{-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Claim.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Endi Putra, SE</h4>
-                <span>Claim Services Section</span>
-                <p>Arihot Pauly Sihite (PKWT)</p>
-                {{-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="member d-flex align-items-start">
-              <div class="pic"><img src="assets/img/team/Administrator.png" class="img-fluid" alt=""></div>
-              <div class="member-info">
-                <h4>Ichwan Syarif Lubis, A.Md.</h4>
-                <span>Finance & Administrator Section</span>
-                <p>- Hindun, SE (Kasir)</p>
-                <p>- Samsudin (Satpam)</p>
-                <p>- Teddy Efendi (Driver)</p>
-                {{-- <div class="social">
-                  <a href=""><i class="ri-twitter-fill"></i></a>
-                  <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
-                </div> --}}
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Kami disini untuk melayani anda</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Jl. Diponegoro No.59 B-C, Sumur Batu, Kec. Tlk. Betung Utara, Kota Bandar Lampung, Lampung 35212, Indonesia</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>destaarum04@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>0721 801 4081</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d496.48790723895786!2d105.26151772204915!3d-5.431663697129779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40da3414b57f09%3A0xfca10192202a3818!2sJasaraharja%20Putera!5e0!3m2!1sen!2sus!4v1705291901483!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form id="contactForm" action="{{ route('submit-form') }}" method="post" role="form" class="php-email-form">
-                @csrf
-                <div class="row">
-                    <div class="form-group col-md-6">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" class="form-control" id="name" required>
-                    </div>
-                    <div class="form-group col-md-6">
-                        <label for="email">Your Email</label>
-                        <input type="email" class="form-control" name="email" id="email" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" class="form-control" name="subject" id="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" name="message" id="message" rows="10" required></textarea>
-                </div>
-                <div class="my-3">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button id="sendMessageButton" type="submit" disabled>Send Message</button></div>
-            </form>
-        </div>
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script>
-    const form = document.getElementById('contactForm');
-    const sendMessageButton = document.getElementById('sendMessageButton');
-
-    // Menangani perubahan di dalam formulir
-    form.addEventListener('change', function(event) {
-        if (validateForm()) {
-            // Jika formulir valid, aktifkan tombol
-            sendMessageButton.disabled = false;
-            location.reload();
-        } else {
-            // Jika formulir tidak valid, nonaktifkan tombol
-            sendMessageButton.disabled = true;
-        }
-    });
-
-    // Fungsi untuk memvalidasi formulir
-    function validateForm() {
-        let isValid = true;
-
-        // Memeriksa setiap input
-        form.querySelectorAll('input, textarea').forEach(function(input) {
-            if (!input.checkValidity()) {
-                // Jika input tidak valid, tandai sebagai tidak valid dan set isValid menjadi false
-                input.classList.add('is-invalid');
-                isValid = false;
-            } else {
-                input.classList.remove('is-invalid');
-            }
-        });
-
-        return isValid;
-    }
-  </script>
-</body>
-
-</html>
+    <script src="{{ asset('js/aos.js') }}"></script>
+    <script src="{{ asset('js/glightbox.min.js') }}"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
+    <script src="{{ asset('js/counter.js') }}"></script>
+    <script src="{{ asset('js/custom.js') }}"></script>
+  </body>
+  </html>
