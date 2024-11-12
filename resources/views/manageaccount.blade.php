@@ -58,7 +58,7 @@
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
-                <span class="hide-menu">Manage Account</span>
+                <span class="hide-menu">Kelola Akun</span>
               </a>
             </li>
             @endif
@@ -99,7 +99,7 @@
               </a>
             </li>
         </ul>
-            
+
         </nav>
         <!-- End Sidebar navigation -->
       </div>

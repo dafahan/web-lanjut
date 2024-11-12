@@ -7,10 +7,44 @@
   <title>JRP</title>
   <link rel="shortcut icon" type="image/png" href="{{asset('/')}}images/logos/favicon.png" />
   <link rel="stylesheet" href="{{asset('/')}}css/styles.min.css" />
+  <style>
+    body {
+        font-family: "Open Sans", sans-serif;
+    }
+    .sidebar-item a{
+        font-size: 16px !important;
+    }
+    .content{
+        padding-top: 100px;
+    }
+    .card {
+        border-radius: 10px;
+        border-color: #000000;
+    }
+
+    .card-body {
+        padding: 3rem;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+    .header-text h2 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .header-text p {
+        font-size: 18px;
+        color: #777;
+    }
+
+  </style>
 </head>
 
 <body>
-  <!--  Body Wrapper -->
   <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
     data-sidebar-position="fixed" data-header-position="fixed">
     <!-- Sidebar Start -->
@@ -18,7 +52,7 @@
       <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
-          <a href="{{url('home')}}" class="text-nowrap logo-img">
+          <a href="{{url('beranda')}}" class="text-nowrap logo-img">
             <img src="{{asset('/')}}images/logo.png" width="180" alt="" />
           </a>
           <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer" id="sidebarCollapse">
@@ -33,7 +67,7 @@
               <span class="hide-menu">Home</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('home')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('beranda')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
@@ -41,72 +75,21 @@
               </a>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('')}}" aria-expanded="false">
+              <a class="sidebar-link" href="{{url('pengajuan')}}" aria-expanded="false">
                 <span>
                   <i class="ti ti-layout-dashboard"></i>
                 </span>
-                <span class="hide-menu">View Website</span>
-              </a>
-            </li>
-            @if(auth()->user()->role == 'Super Admin')
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Manage</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('manageaccount')}}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Manage Account</span>
-              </a>
-            </li>
-            @endif
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Post</span>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('layananadmin')}}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Layanan</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('visiadmin')}}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Visi</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('misiadmin')}}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Misi</span>
-              </a>
-            </li>
-            <li class="sidebar-item">
-              <a class="sidebar-link" href="{{url('strukturadmin')}}" aria-expanded="false">
-                <span>
-                  <i class="ti ti-layout-dashboard"></i>
-                </span>
-                <span class="hide-menu">Struktur</span>
+                <span class="hide-menu">Pengajuan</span>
               </a>
             </li>
         </ul>
-
         </nav>
-        <!-- End Sidebar navigation -->
       </div>
       <!-- End Sidebar scroll-->
     </aside>
     <!--  Sidebar End -->
     <!--  Main wrapper -->
+
     <div class="body-wrapper">
       <!--  Header Start -->
       <header class="app-header">
@@ -153,17 +136,62 @@
           </div>
         </nav>
       </header>
-      <!--  Header End -->
-      <div class="container-fluid">
-        <!--  Row 1 -->
-        <div class="row">
-        <div class="row">
-        </div>
-        <div class="row">
-        </div>
-      </div>
-    </div>
   </div>
+
+ <!-- Content -->
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <!-- Card untuk Formulir Pengajuan Asuransi -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="header-text mb-4">
+                            <h2>Pengajuan Asuransi</h2>
+                            <p>Silakan isi formulir di bawah ini untuk mengajukan asuransi.</p>
+                        </div>
+
+                        <!-- Formulir Pengajuan Asuransi -->
+                        <form action="{{ route('customer.pengajuan') }}" method="POST">
+                            @csrf
+                            <div class="mb-3">
+                                <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required="">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" name="telepon" class="form-control" placeholder="Nomor Telepon" required="">
+                            </div>
+                            <div class="mb-3">
+                                <select name="jenis_asuransi" class="form-control" required="">
+                                    <option value="">Pilih Jenis Asuransi</option>
+                                    <option value="Kecelakaan">Asuransi Kecelakaan</option>
+                                    <option value="Kendaraan">Asuransi Kendaraan</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <textarea name="keterangan" class="form-control" placeholder="Keterangan (opsional)" rows="4"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary w-100 fs-6">Ajukan Asuransi</button>
+                            </div>
+                        </form>
+
+                        @if(session('status'))
+                            <div class="alert alert-success">
+                                {{ session('status') }}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+                <!-- End Card -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
   <script src="{{asset('/')}}libs/jquery/dist/jquery.min.js"></script>
   <script src="{{asset('/')}}libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="{{asset('/')}}js/sidebarmenu.js"></script>

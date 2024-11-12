@@ -36,7 +36,7 @@ class HomeController extends Controller
     public function produk(){
         return view('produk');
     }
-    
+
     public function layanan(){
         $data = Post::where('type', 'Layanan')->first();
         return view('lp', ['data' => $data]);
@@ -63,5 +63,5 @@ class HomeController extends Controller
     }
 
 
-    
+
 }

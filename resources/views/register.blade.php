@@ -24,10 +24,10 @@
            <img src="{{ asset('images/logo.png') }}" class="img-fluid" style="width: 250px;">
 
            </div>
-       </div> 
+       </div>
 
     <!-------------------- ------ Right Box ---------------------------->
-        
+
        <div class="col-md-6 right-box">
           <div class="row align-items-center">
                 <div class="header-text mb-4">
@@ -46,7 +46,10 @@
                     <input type="password" name="password" class="form-control" placeholder="Password" required="">
                     </div>
                     <div class="input-group mb-3">
-                    <input type="text" name="role" class="form-control" value="Admin" readonly>
+                        <select name="role" class="form-control" required>
+                            <option value="admin">Admin</option>
+                            <option value="customer">Customer</option>
+                        </select>
                     </div>
                     <div class="input-group mb-3">
                         <button type="submit" class="btn btn-primary btn-warning w-100 fs-6">Daftar</button>
@@ -55,9 +58,9 @@
                             <center><small>Memiliki Akun</small> <small><a href="{{route('login')}}" class="text-warning">Masuk</a></small></center>
                     </div>
                 </form>
-                
+
           </div>
-       </div> 
+       </div>
 
       </div>
     </div>

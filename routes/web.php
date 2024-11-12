@@ -8,6 +8,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\PostController;
 use App\Http\Middleware\CheckRole;
+use App\Http\Controllers\CustomerController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -61,10 +63,11 @@ Route::post('register/action', [RegisterController::class, 'actionregister'])->n
 
 
 //SUPER ADMIN
-Route::get('manageaccount', [HomeController::class, 'manageaccount'])->name('manageaccount')->middleware('auth');
-Route::get('activate/{id}', [HomeController::class, 'activateaccount'])->name('activateaccount')->middleware('auth');
+Route::get('manageaccount', [HomeController::class, 'manageaccount'])->name('manageaccount');
+Route::get('activate/{id}', [HomeController::class, 'activateaccount'])->name('activateaccount');
 
 //ADMIN
+Route::get('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 Route::get('home', [HomeController::class, 'index'])->name('home')->middleware('auth');
 
 //LAYANAN
@@ -105,6 +108,14 @@ Route::post('storestruktur', [PostController::class, 'storeStruktur'])->name('st
 Route::get('detailstruktur/{id}', [PostController::class, 'detailstruktur'])->name('detailstruktur')->middleware('auth');
 Route::get('editstruktur/{id}', [PostController::class, 'editStruktur'])->name('editstruktur')->middleware('auth');
 Route::put('updatestruktur/{id}', [PostController::class, 'updateStruktur'])->name('updatestruktur')->middleware('auth');
+
+
+//CUSTOMER
+Route::get('/beranda', [CustomerController::class, 'beranda'])->name('beranda')->middleware('auth');
+Route::get('pengajuan', [CustomerController::class, 'pengajuan'])->name('customer.pengajuan')->middleware('auth');
+Route::get('/life', [CustomerController::class, 'life'])->name('customer.life');
+Route::get('health', [CustomerController::class, 'health'])->name('customer.health');
+Route::get('vehicle', [CustomerController::class, 'vehicle'])->name('customer.vehicle');
 
 
 //GUEST

@@ -83,7 +83,8 @@
           <div class="d-flex justify-content-center justify-content-lg-start">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
             <a href="https://youtu.be/8qvee1ECsz4?si=90TzMZ81RogeI76k" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
-          </div>
+
+        </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/img/Logo_JRP_Insurance.png" class="img-fluid animated" alt="">
@@ -141,27 +142,27 @@
         <div class="row content">
           <div class="col-lg-6">
             <p style="text-align: justify">
-                Berdiri pada tahun 1993, PT Asuransi Jasaraharja Putera atau JRP-INSURANCE yang merupakan Anak Usaha PT Jasa Raharja dalam waktu yang relatif 
-                singkat tumbuh menjadi salah satu perusahaan asuransi terkemuka di Indonesia. 
-                Hal ini tak lepas dari kuatnya kepercayaan yang diberikan stakeholder dan shareholder kepada Perseroan. 
+                Berdiri pada tahun 1993, PT Asuransi Jasaraharja Putera atau JRP-INSURANCE yang merupakan Anak Usaha PT Jasa Raharja dalam waktu yang relatif
+                singkat tumbuh menjadi salah satu perusahaan asuransi terkemuka di Indonesia.
+                Hal ini tak lepas dari kuatnya kepercayaan yang diberikan stakeholder dan shareholder kepada Perseroan.
                 Untuk itu JRP-INSURANCE senantiasa berkomitmen untuk menjaga kepercayaan dengan melakukan peningkatan kualitas pelayanan kepada para customer.
             </p>
             <p style="text-align: justify">
-                Saat ini, layanan JRP-INSURANCE dapat dinikmati di seluruh Indonesia melalui 111 Jaringan Pelayanan yang terdiri dari 
-                25 Kantor Cabang yang berada di daerah tingkat I provinsi, 27 Kantor Pemasaran yang berada di daerah tingkat II Kabupaten/Kota dan 
-                59 Kantor Unit Layanan yang berada di daerah Kabupaten/Kota. 
+                Saat ini, layanan JRP-INSURANCE dapat dinikmati di seluruh Indonesia melalui 111 Jaringan Pelayanan yang terdiri dari
+                25 Kantor Cabang yang berada di daerah tingkat I provinsi, 27 Kantor Pemasaran yang berada di daerah tingkat II Kabupaten/Kota dan
+                59 Kantor Unit Layanan yang berada di daerah Kabupaten/Kota.
             </p>
             <p style="text-align: justify">
-                JRP-INSURANCE memberikan beragam solusi untuk Asuransi Umum Konvensional (Asuransi Non Jiwa Konvensional), 
+                JRP-INSURANCE memberikan beragam solusi untuk Asuransi Umum Konvensional (Asuransi Non Jiwa Konvensional),
                 Unit Syariah Asuransi Umum, Penjaminan Konvensional (Suretyship), Reasuransi Konvensional dan Portal web dan/atau platform digital
-                dengan tujuan komersial sesuai dengan Nomor Induk Berusaha (NIB) Nomor : 1235000211076 dan Akta Perusahaan, layanan yang beragam tersebut 
+                dengan tujuan komersial sesuai dengan Nomor Induk Berusaha (NIB) Nomor : 1235000211076 dan Akta Perusahaan, layanan yang beragam tersebut
                 mencerminkan tekad JRP-INSURANCE untuk menjadi one stop insurance service company.
             </p>
             <p style="text-align: justify">
-                Komitmen  JRP-INSURANCE   dalam   menjaga   reputasinya sebagai perusahaan asuransi yang terpercaya tercermin dalam 
-                melakukan Tata Kelola Perusahaan Perasuransian yang Baik sesuai dengan nilai-nilai Good Corporate Governance (GCG) 
-                serta melakukan pernerapan ISO 370001-2016  Sistem Manajemen Anti Penyuapan (SMAP) dan secara rutin melakukan pemeringkatan 
-                dengan meraih rating <strong> idAA- </strong> (Double A minus Stable Outlook). 
+                Komitmen  JRP-INSURANCE   dalam   menjaga   reputasinya sebagai perusahaan asuransi yang terpercaya tercermin dalam
+                melakukan Tata Kelola Perusahaan Perasuransian yang Baik sesuai dengan nilai-nilai Good Corporate Governance (GCG)
+                serta melakukan pernerapan ISO 370001-2016  Sistem Manajemen Anti Penyuapan (SMAP) dan secara rutin melakukan pemeringkatan
+                dengan meraih rating <strong> idAA- </strong> (Double A minus Stable Outlook).
             </p>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
@@ -177,8 +178,8 @@
                 <li style="font-weight: bold"><i class="ri-check-double-line"></i> Kolaboratif </li>
               </ul>
             <p style="text-align: justify">
-                Dengan melakukan penerapan Tata Kelola Perusahaan Perasuransian yang baik serta implementasi Core Value <strong> AKHLAK </strong>, 
-                kami yakin JRP-INSURANCE semakin mendapat kepercayaan dari para nasabah dan mitra bisnis, sehingga mampu mengibarkan diri menjadi 
+                Dengan melakukan penerapan Tata Kelola Perusahaan Perasuransian yang baik serta implementasi Core Value <strong> AKHLAK </strong>,
+                kami yakin JRP-INSURANCE semakin mendapat kepercayaan dari para nasabah dan mitra bisnis, sehingga mampu mengibarkan diri menjadi
                 perusahaan asuransi terkemuka di Indonesia sesuai dengan Visi Perusahaan.
             </p>
             {{-- <a href="#" class="btn-learn-more">Learn More</a> --}}
@@ -213,7 +214,7 @@
               @endif              </p>
             </div>
 
-            <!-- <div class="accordion-list">
+            <div class="accordion-list">
               <ul>
                 <li>
                   <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
@@ -243,7 +244,7 @@
                 </li>
 
               </ul>
-            </div> -->
+            </div>
 
           </div>
 
@@ -257,7 +258,7 @@
     <section id="skills" class="skills">
       <div class="container" data-aos="fade-up">
 
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-lg-6 d-flex align-items-center" data-aos="fade-right" data-aos-delay="100">
             <img src="assets/img/skills.png" class="img-fluid" alt="">
           </div>
@@ -301,7 +302,7 @@
             </div>
 
           </div>
-        </div> -->
+        </div>
 
       </div>
     </section><!-- End Skills Section -->
@@ -312,7 +313,7 @@
 
         <div class="section-title">
           <h2>Layanan</h2>
-          
+
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
         @if(isset($data))
@@ -321,7 +322,7 @@
         <hr>
         <p>Download Berkas</p>
 
-        <!-- <div class="row">
+        <div class="row">
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
@@ -354,13 +355,13 @@
             </div>
           </div>
 
-        </div> -->
+        </div>
 
       </div>
     </section><!-- End Services Section -->
 
     <!-- ======= Cta Section ======= -->
-    <!-- <section id="cta" class="cta">
+    <section id="cta" class="cta">
       <div class="container" data-aos="zoom-in">
 
         <div class="row">
@@ -374,7 +375,7 @@
         </div>
 
       </div>
-    </section> -->
+    </section>
     <!-- End Cta Section -->
 
     <!-- ======= Product Section ======= -->
@@ -386,7 +387,7 @@
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
-        <!-- <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">All</li>
           <li data-filter=".filter-app">App</li>
           <li data-filter=".filter-card">Card</li>
@@ -483,7 +484,7 @@
               <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
-          </div> -->
+          </div>
 
         </div>
 
@@ -500,7 +501,7 @@
           <h4>PT Jasaraharja Putera Branch Office Lampung</h4>
           <div class="images" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
           @if(isset($visi))
-            <img src="{{asset('storage/' . $struktur->image)}}" alt="" style="max-width: 80%; height: auto; object-fit:containl">
+            {{-- <img src="{{asset('storage/' . $struktur->image)}}" alt="" style="max-width: 80%; height: auto; object-fit:containl"> --}}
           @endif
         </div>
         </div>
@@ -511,7 +512,7 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Budi Santosa, SE</h4>
+                <h4>John Doe</h4>
                 <span>Branch Manager</span>
                 {{-- <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
                 <div class="social">
@@ -528,9 +529,9 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Risman, S.Komp</h4>
+                <h4>Alexander</h4>
                 <span>Marketing Office</span>
-                <p>- Dwi Ayu Pritawaty, S.Si</p>
+                <p></p>
                 {{-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -545,9 +546,9 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Rakha Prisma Ardyan</h4>
+                <h4>Loius</h4>
                 <span>Business Section I</span>
-                <p>- Mutia Yasinta Bugis, S.Kom (PKWT)</p>
+                <p></p>
                 {{-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -562,9 +563,9 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sri Dewi, SE, AAAIK</h4>
+                <h4>Issabelle</h4>
                 <span>Business Section II</span>
-                <p>- Faris Setiawan, S.T (PKWT)</p>
+                <p></p>
                 {{-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -579,9 +580,9 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Endi Putra, SE</h4>
+                <h4>Anthony</h4>
                 <span>Claim Services Section</span>
-                <p>Arihot Pauly Sihite (PKWT)</p>
+                <p></p>
                 {{-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -596,11 +597,11 @@
             <div class="member d-flex align-items-start">
               <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Ichwan Syarif Lubis, A.Md.</h4>
+                <h4>Eric</h4>
                 <span>Finance & Administrator Section</span>
-                <p>- Hindun, SE (Kasir)</p>
-                <p>- Samsudin (Satpam)</p>
-                <p>- Teddy Efendi (Driver)</p>
+                <p></p>
+                <p></p>
+                <p></p>
                 {{-- <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -625,7 +626,7 @@
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
-        <!-- <div class="row">
+        <div class="row">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
@@ -672,7 +673,7 @@
             </div>
           </div>
 
-        </div> -->
+        </div>
 
       </div>
     </section><!-- End Pricing Section -->
@@ -686,7 +687,7 @@
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
         </div>
 
-        <!-- <div class="faq-list">
+        <div class="faq-list">
           <ul>
             <li data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Non consectetur a erat nam at lectus urna duis? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
@@ -734,7 +735,7 @@
             </li>
 
           </ul>
-        </div> -->
+        </div>
 
       </div>
     </section><!-- End Frequently Asked Questions Section -->
@@ -776,8 +777,9 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
+            {{-- <form action="forms/contact.php" method="post" role="form" class="php-email-form"> --}}
+            <form action="" method="post" role="form" class="php-email-form">
+                <div class="row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
                   <input type="text" name="name" class="form-control" id="name" required>
@@ -812,7 +814,7 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  
+
     <div class="container footer-bottom clearfix">
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
