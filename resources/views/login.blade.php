@@ -41,12 +41,7 @@
                         <div class="input-group mb-3">
                             <input type="password" name="password" class="form-control" placeholder="Password" required="">
                         </div>
-                        <div class="input-group mb-3">
-                            <select name="role" class="form-control" required>
-                                <option value="admin">Admin</option>
-                                <option value="customer">Customer</option>
-                            </select>
-                        </div>
+
                         <div class="input-group mb-3">
                             <button type="submit" class="btn btn-primary btn-warning w-100 fs-6">Masuk</button>
                         </div>

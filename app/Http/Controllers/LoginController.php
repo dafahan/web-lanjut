@@ -14,11 +14,10 @@ class LoginController extends Controller
     {
         if (Auth::check()) {
             $userRole = Auth::user()->role;
-
-            if ($userRole === 'Admin') {
+            if ($userRole === 'admin') {
                 return redirect('home');
-            } elseif ($userRole === 'Customer') {
-                return redirect('/customer/beranda');
+            } elseif ($userRole === 'customer') {
+                return redirect('beranda');
             }
          }
         // else {
@@ -60,11 +59,11 @@ class LoginController extends Controller
         //     'password' => $request->input('password')
         // ];
 
-        if(Auth::Attempt(['email' => $email, 'password' => $password, 'active' => 1,'role'=>'Admin'])){
+        if(Auth::Attempt(['email' => $email, 'password' => $password, 'active' => 1,'role'=>'admin'])){
             return redirect('home');
         }
-        else if(Auth::Attempt(['email' => $email, 'password' => $password, 'active' => 0,'role'=>'Customer'])){
-            return redirect('');
+        else if(Auth::Attempt(['email' => $email, 'password' => $password, 'active' => 0,'role'=>'customer'])){
+            return redirect('beranda');
         }
         else{
             return redirect('/login');
