@@ -174,6 +174,15 @@
                                 <textarea name="keterangan" class="form-control" placeholder="Keterangan (opsional)" rows="4"></textarea>
                             </div>
                             <div class="mb-3">
+                                <label for="file">Uplaod Bukti Pendukung</label>
+                                <ul>
+                                  <li>KTP</li>
+                                  <li>Surat Pendukung Kepolisian</li>
+                                </ul>
+                              
+                               <input type="file" id="file" multiple name="file">
+                            </div>
+                            <div class="mb-3">
                                 <button type="submit" class="btn btn-primary w-100 fs-6">Ajukan Asuransi</button>
                             </div>
                         </form>
