@@ -36,7 +36,7 @@
     }
 
     .status-pending {
-        background-color: #f0ad4e;
+        background-color: #5bc0de;
         color: white;
         padding: 10px;
         border-radius: 5px;
@@ -44,7 +44,7 @@
     }
 
     .status-approved {
-        background-color: #5bc0de;
+        background-color: #20d742;
         color: white;
         padding: 10px;
         border-radius: 5px;
