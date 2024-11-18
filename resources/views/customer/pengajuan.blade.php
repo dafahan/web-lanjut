@@ -15,7 +15,7 @@
         font-size: 16px !important;
     }
     .content{
-        padding-top: 100px;
+        padding-top: 20px;
     }
     .card {
         border-radius: 10px;
@@ -26,9 +26,12 @@
         padding: 3rem;
     }
 
-    .btn-primary:hover {
+    .btn-primary{
         background-color: #0056b3;
-        border-color: #0056b3;
+    }
+
+    .btn-primary:hover {
+        background-color: #1686ff;
     }
 
     .header-text h2 {
@@ -39,6 +42,36 @@
     .header-text p {
         font-size: 18px;
         color: #777;
+    }
+    .file-upload-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .file-upload-table td {
+        padding: 10px 5px;
+        vertical-align: middle;
+    }
+
+    .file-upload-table td:first-child {
+        width: 30%; 
+    }
+
+    .file-upload-table input[type="file"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .file-upload-table input[type="file"]:hover {
+        border-color: #007bff;
+    }
+
+    .file-upload-table td strong {
+        font-size: 14px;
+        color: #333;
     }
 
   </style>
@@ -82,6 +115,14 @@
                 <span class="hide-menu">Pengajuan</span>
               </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{url('statuspengajuan')}}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Status Pengajuan</span>
+                </a>
+              </li>
         </ul>
         </nav>
       </div>
@@ -152,13 +193,13 @@
                         </div>
 
                         <!-- Formulir Pengajuan Asuransi -->
-                        <form action="{{ route('customer.pengajuan') }}" method="POST">
+                        <form action="{{ route('storepengajuan') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required="">
+                                <input type="text" name="id" class="form-control" placeholder="ID Asuransi" required="">
                             </div>
                             <div class="mb-3">
-                                <input type="email" name="email" class="form-control" placeholder="Email" required="">
+                                <input type="text" name="nama" class="form-control" placeholder="Nama Lengkap" required="">
                             </div>
                             <div class="mb-3">
                                 <input type="text" name="telepon" class="form-control" placeholder="Nomor Telepon" required="">
@@ -167,23 +208,47 @@
                                 <select name="jenis_asuransi" class="form-control" required="">
                                     <option value="">Pilih Jenis Asuransi</option>
                                     <option value="Kecelakaan">Asuransi Kecelakaan</option>
-                                    <option value="Kendaraan">Asuransi Kendaraan</option>
+                                    <option value="Kendaraan">Asuransi Kesehatan</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <textarea name="keterangan" class="form-control" placeholder="Keterangan (opsional)" rows="4"></textarea>
                             </div>
                             <div class="mb-3">
+                                <label for="file"><strong>Upload Bukti Pendukung</strong></label>
+                                <table class="file-upload-table">
+                                    <tr>
+                                        <td><strong>KTP</strong></td>
+                                        <td>
+                                            <input type="file" id="ktp" name="file_ktp" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Dokumen Pendukung (Surat Kepolisian atau Surat Dokter)</strong></td>
+                                        <td>
+                                            <input type="file" id="dokumen_pendukung" name="file_dokumen_pendukung" class="form-control">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Bukti Kepemilikan Asuransi</strong></td>
+                                        <td>
+                                            <input type="file" id="bukti_asuransi" name="file_bukti_asuransi" class="form-control">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                            {{-- <div class="mb-3">
                                 <label for="file">Uplaod Bukti Pendukung</label>
                                 <ul>
                                   <li>KTP</li>
                                   <li>Surat Pendukung Kepolisian</li>
                                 </ul>
-                              
+
                                <input type="file" id="file" multiple name="file">
-                            </div>
+                            </div> --}}
                             <div class="mb-3">
-                                <button type="submit" class="btn btn-primary w-100 fs-6">Ajukan Asuransi</button>
+                                <button type="submit" class="btn btn-primary w-100" style="font-size: 18px;">Ajukan Asuransi</button>
                             </div>
                         </form>
 

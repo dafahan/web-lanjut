@@ -4,17 +4,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JRP</title>
+  <title>Asuransi Kecelakaan - JRP</title>
   <link rel="shortcut icon" type="image/png" href="{{asset('/')}}images/logos/favicon.png" />
   <link rel="stylesheet" href="{{asset('/')}}css/styles.min.css" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <style>
-    .content{
+    .content {
         padding-top: 40px;
     }
+
     .card {
         border-radius: 10px;
         border-color: #000000;
+    }
+
+    .section-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .benefit-list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .benefit-list li {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .cta-button {
+        margin-top: 20px;
+        padding: 10px 30px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .cta-button:hover {
+        background-color: #0056b3;
+        color: white;
+    }
+
+    .testimonial {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    .testimonial .quote {
+        font-style: italic;
+        font-size: 18px;
+    }
+
+    .testimonial .author {
+        text-align: right;
+        font-weight: bold;
+        margin-top: 15px;
     }
   </style>
 </head>
@@ -25,7 +74,6 @@
     data-sidebar-position="fixed" data-header-position="fixed">
     <!-- Sidebar Start -->
     <aside class="left-sidebar">
-      <!-- Sidebar scroll-->
       <div>
         <div class="brand-logo d-flex align-items-center justify-content-between">
           <a href="{{url('beranda')}}" class="text-nowrap logo-img">
@@ -35,13 +83,8 @@
             <i class="ti ti-x fs-8"></i>
           </div>
         </div>
-        <!-- Sidebar navigation-->
         <nav class="sidebar-nav scroll-sidebar" data-simplebar="">
           <ul id="sidebarnav">
-            <li class="nav-small-cap">
-              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">Home</span>
-            </li>
             <li class="sidebar-item">
               <a class="sidebar-link" href="{{url('beranda')}}" aria-expanded="false">
                 <span>
@@ -59,18 +102,16 @@
               </a>
             </li>
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{url('statuspengajuan')}}" aria-expanded="false">
-                  <span>
-                    <i class="ti ti-layout-dashboard"></i>
-                  </span>
-                  <span class="hide-menu">Status Pengajuan</span>
-                </a>
-              </li>
+              <a class="sidebar-link" href="{{url('statuspengajuan')}}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-layout-dashboard"></i>
+                </span>
+                <span class="hide-menu">Status Pengajuan</span>
+              </a>
+            </li>
           </ul>
         </nav>
-        <!-- End Sidebar navigation -->
       </div>
-      <!-- End Sidebar scroll-->
     </aside>
     <!-- Sidebar End -->
 
@@ -107,42 +148,23 @@
       <!-- Page Content -->
       <div class="content">
         <div class="container px-4 px-lg-5 mt-5">
-          <!-- Welcome Card -->
-          <div class="card text-center mb-4" style="background: linear-gradient(135deg, #1e90ff, #00bfff); color: #fff; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-            <div class="card-body">
-              <h3 class="card-title" style="font-weight: bold; color: #fff;; font-size: 24px;">Welcome to Jasa Raharja Putera Insurance!</h3>
-              <p class="card-text" style="color: #f0f8ff; font-size: 16px">Kami hadir untuk memberikan rasa aman dan perlindungan untuk Anda. Mari ciptakan masa depan yang terlindungi.</p>
-            </div>
-          </div>
+          <!-- Section: Introduction -->
+          <div class="section-title">Asuransi Kecelakaan - Perlindungan Tanpa Batas</div>
+          <p>Asuransi kecelakaan kami memberikan perlindungan maksimal dalam hal kecelakaan pribadi. Dengan manfaat yang luas dan proses klaim yang mudah, Anda dapat merasa aman dan terlindungi di mana pun Anda berada.</p>
 
-    <!-- Insurance Products Section -->
-    <div class="row">
-        <div class="col-md-6 mb-4">
-        <div class="card h-100" style="width: 100%; max-width: 100%; height: 400px;">
-            <img src="assets/img/asuransi-kesehatan.jpg" class="card-img-top" alt="Product 1" style="height: 300px; object-fit: cover;">
-            <div class="card-body">
-            <h5 class="card-title">Asuransi Kesehatan</h5>
-            <p class="card-text">Lindungi kesehatan Anda dan keluarga dengan perlindungan rawat inap, rawat jalan, dan penyakit kritis. Nikmati layanan medis terbaik dengan proses klaim mudah dan biaya terjangkau.</p>
-            <a href="{{url('/kesehatan')}}" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-6 mb-4">
-        <div class="card h-100" style="width: 100%; max-width: 100%; height: 400px;">
-            <img src="assets/img/asuransi-kecelakaan.jpg" class="card-img-top" alt="Product 2" style="height: 300px; object-fit: cover;">
-            <div class="card-body">
-            <h5 class="card-title">Asuransi Kecelakaan</h5>
-            <p class="card-text">Perlindungan finansial terhadap kecelakaan, termasuk biaya pengobatan, kecacatan, dan santunan meninggal dunia. Cepat dan mudah klaimnya saat dibutuhkan.</p>
-            <a href="{{url('/kecelakaan')}}" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-  
-  
-            
-          </div>
+          <!-- Section: Manfaat Layanan -->
+          <div class="section-title">Manfaat Layanan Kami</div>
+          <ul class="benefit-list">
+            <li>Perlindungan finansial saat terjadi kecelakaan yang menyebabkan cedera atau cacat.</li>
+            <li>Biaya rawat inap dan pengobatan akibat kecelakaan.</li>
+            <li>Uang tunai untuk keluarga jika terjadi kecelakaan fatal.</li>
+            <li>Proses klaim cepat dan mudah tanpa prosedur yang rumit.</li>
+            <li>Perlindungan 24 jam, kapan saja dan di mana saja, baik di rumah maupun dalam perjalanan.</li>
+          </ul>
+
+
+        <br><br>
+      <a href="{{url('beranda')}}" class="cta-button">Kembali</a>
         </div>
       </div>
 

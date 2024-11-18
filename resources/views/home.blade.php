@@ -48,6 +48,7 @@
                 <span class="hide-menu">View Website</span>
               </a>
             </li>
+
             @if(auth()->user()->role == 'Super Admin')
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
@@ -98,6 +99,14 @@
                 <span class="hide-menu">Struktur</span>
               </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{url('')}}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Verifikasi Pengajuan</span>
+                </a>
+              </li>
         </ul>
 
         </nav>
@@ -153,16 +162,21 @@
           </div>
         </nav>
       </header>
-      <!--  Header End -->
       <div class="container-fluid">
-        <!--  Row 1 -->
+        <!-- Grafik Garis -->
         <div class="row">
-        <div class="row">
-        </div>
-        <div class="row">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Statistik Nasabah Baru Per Bulan</h4>
+                <div id="chart-nasabah-line"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      
+
   </div>
   <script src="{{asset('/')}}libs/jquery/dist/jquery.min.js"></script>
   <script src="{{asset('/')}}libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -171,6 +185,65 @@
   <script src="{{asset('/')}}libs/apexcharts/dist/apexcharts.min.js"></script>
   <script src="{{asset('/')}}libs/simplebar/dist/simplebar.js"></script>
   <script src="{{asset('/')}}js/dashboard.js"></script>
+  <script>
+    const dataNasabahLine = {
+      categories: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli"],
+      series: [
+        {
+          name: "Asuransi Kesehatan",
+          data: [70, 80, 85, 75, 80, 85, 90], 
+        },
+        {
+          name: "Asuransi Kecelakaan",
+          data: [60, 65, 70, 60, 65, 70, 75], 
+        }
+      ]
+    };
+  
+    const optionsLine = {
+      chart: {
+        type: "line",
+        height: 350,
+        toolbar: {
+          show: false 
+        }
+      },
+      stroke: {
+        curve: "smooth", 
+        width: 2 
+      },
+      series: dataNasabahLine.series,
+      xaxis: {
+        categories: dataNasabahLine.categories,
+        title: {
+          text: "Bulan",
+          position: 'bottom'
+        }
+      },
+      yaxis: {
+        title: {
+          text: "Jumlah Nasabah"
+        }
+      },
+      colors: ["#1E90FF", "#8A2BE2"], 
+      markers: {
+        size: 5 
+      },
+      title: {
+        text: "Statistik Nasabah Baru Per Bulan",
+        align: "center"
+      },
+      legend: {
+        position: "top", 
+        horizontalAlign: "center"
+      }
+    };
+  
+    // Render grafik garis
+    const chartLine = new ApexCharts(document.querySelector("#chart-nasabah-line"), optionsLine);
+    chartLine.render();
+  </script>
+  
 </body>
 
 </html>

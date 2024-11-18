@@ -98,7 +98,7 @@
               </a>
             </li>
         </ul>
-            
+
         </nav>
         <!-- End Sidebar navigation -->
       </div>
@@ -164,9 +164,9 @@
                                             <h4 class="card-title">Create Misi</h4>
                                         </div>
                                         <div class="card-content table-responsive">
-                                          <!-- <textarea type="text" style="max-width: 90%; margin-left:30px;" class="form-control" name="deskripsi" placeholder="Deskripsi" rows="15"></textarea> -->
                                           <input id="deskripsi" type="hidden" name="deskripsi">
-                                          <trix-editor input="deskripsi"></trix-editor>
+                                          <trix-editor input="deskripsi"></trix-editor><br>
+                                          <textarea type="text" style="max-width: 90%; margin-left:30px;" class="form-control" name="deskripsi" placeholder="Deskripsi" rows="15"></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-outline-success mx-3 mt-2 d-block ml-auto" style="max-width: 10%;" >SIMPAN</button>
                                       </div>

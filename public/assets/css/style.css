@@ -140,7 +140,7 @@ h6 {
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
+* Desktop Navigation
 */
 .navbar {
   padding: 0;
@@ -270,7 +270,7 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
+* Mobile Navigation
 */
 .mobile-nav-toggle {
   color: #fff;
@@ -1823,3 +1823,62 @@ section {
     padding-top: 4px;
   }
 }
+
+
+.section-bg {
+    background-color: #f8f9fa; /* Warna background untuk membedakan */
+    padding: 50px 0;
+  }
+
+  .icon-box {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+  }
+
+  .icon-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .icon {
+    margin-bottom: 20px;
+    font-size: 40px;
+    color: #007bff;
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  h4 a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  h4 a:hover {
+    color: #007bff;
+  }
+
+  p {
+    font-size: 16px;
+    color: #6c757d;
+  }
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+  }

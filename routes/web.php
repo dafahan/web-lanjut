@@ -113,9 +113,12 @@ Route::put('updatestruktur/{id}', [PostController::class, 'updateStruktur'])->na
 //CUSTOMER
 Route::get('/beranda', [CustomerController::class, 'beranda'])->name('beranda')->middleware('auth');
 Route::get('pengajuan', [CustomerController::class, 'pengajuan'])->name('customer.pengajuan')->middleware('auth');
-Route::get('/life', [CustomerController::class, 'life'])->name('customer.life');
-Route::get('health', [CustomerController::class, 'health'])->name('customer.health');
-Route::get('vehicle', [CustomerController::class, 'vehicle'])->name('customer.vehicle');
+Route::post('storepengajuan', [CustomerController::class, 'storePengajuan'])->name('storepengajuan')->middleware('auth');
+Route::get('statuspengajuan', [CustomerController::class, 'statusPengajuan'])->name('statuspengajuan')->middleware('auth');
+Route::get('/cekStatusPengajuan', [CustomerController::class, 'cekStatusPengajuan'])->name('cekStatusPengajuan');
+
+Route::get('/kesehatan', [CustomerController::class, 'kesehatan'])->name('customer.kesehatan');
+Route::get('kecelakaan', [CustomerController::class, 'kecelakaan'])->name('customer.kecelakaan');
 
 
 //GUEST
