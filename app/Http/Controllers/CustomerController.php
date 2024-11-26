@@ -49,6 +49,7 @@ class CustomerController extends Controller
         $pengajuan->telepon = $request->telepon;
         $pengajuan->jenis_asuransi = $request->jenis_asuransi;
         $pengajuan->keterangan = $request->keterangan;
+        $pengajuan->user_id = auth()->id();
 
         // Simpan file jika ada
         if ($request->hasFile('file_ktp')) {
