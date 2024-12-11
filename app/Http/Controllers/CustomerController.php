@@ -87,6 +87,21 @@ class CustomerController extends Controller
     //         return redirect()->route('statuspengajuan')->with('error', 'Pengajuan tidak ditemukan');
     //     }
     // }
+    public function verifikasiPengajuan()
+{
+    $pengajuans = Pengajuan::where('status', 0)->get(); // Fetch only pending pengajuans
+    return view('admin.verifikasi_pengajuan', compact('pengajuans'));
+}
+
+public function approvePengajuan($id)
+{
+    $pengajuan = Pengajuan::findOrFail($id);
+    $pengajuan->status = 1; // Mark as approved
+    $pengajuan->save();
+
+    return redirect()->route('verifikasi.pengajuan')->with('status', 'Pengajuan approved successfully.');
+}
+
 
 
     public function kecelakaan()

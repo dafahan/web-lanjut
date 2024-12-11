@@ -123,6 +123,8 @@ Route::get('/cekStatusPengajuan', [CustomerController::class, 'cekStatusPengajua
 
 Route::get('/kesehatan', [CustomerController::class, 'kesehatan'])->name('customer.kesehatan');
 Route::get('kecelakaan', [CustomerController::class, 'kecelakaan'])->name('customer.kecelakaan');
+Route::get('/verifikasi-pengajuan', [CustomerController::class, 'verifikasiPengajuan'])->name('verifikasi.pengajuan');
+Route::post('/approve-pengajuan/{id}', [CustomerController::class, 'approvePengajuan'])->name('approve.pengajuan');
 
 
 //GUEST
