@@ -1,3 +1,6 @@
+
+
+
 <!doctype html>
 <html lang="en">
 
@@ -9,14 +12,62 @@
   <link rel="stylesheet" href="{{asset('/')}}css/styles.min.css" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <style>
-    .content{
-        padding-top: 40px;
-    }
-    .card {
-        border-radius: 10px;
-        border-color: #000000;
-    }
-  </style>
+        .chat-container {
+            
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .chat-box {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding-right: 15px;
+        }
+        .message {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .message.user {
+            justify-content: flex-end;
+        }
+        .message.bot {
+            justify-content: flex-start;
+        }
+        .message .text {
+            max-width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+        }
+        .message.user .text {
+            background-color: #007bff;
+            color: white;
+        }
+        .message.bot .text {
+            background-color: #f1f1f1;
+        }
+        .input-area input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .input-area button {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .input-area button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
@@ -107,7 +158,6 @@
                   </div>
                 </div>
               </li>
-              
             </ul>
           </div>
         </nav>
@@ -115,36 +165,20 @@
 
       <!-- Page Content -->
       <div class="content">
-        <div class="container px-4 px-lg-5 mt-5">
+        <div class="container px-4 px-lg-5 mt-5" style="position:relative">
           <!-- Welcome Card -->
-          <div class="card text-center mb-4" style="background: linear-gradient(135deg, #1e90ff, #00bfff); color: #fff; border-radius: 10px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
-            <div class="card-body">
-              <h3 class="card-title" style="font-weight: bold; color: #fff;; font-size: 24px;">Welcome to Jasa Raharja Putera Insurance!</h3>
-              <p class="card-text" style="color: #f0f8ff; font-size: 16px">Kami hadir untuk memberikan rasa aman dan perlindungan untuk Anda. Mari ciptakan masa depan yang terlindungi.</p>
-            </div>
-          </div>
+
 
     <!-- Insurance Products Section -->
-    <div class="row">
-        <div class="col-md-6 mb-4">
-        <div class="card h-100" style="width: 100%; max-width: 100%; height: 400px;">
-            <img src="assets/img/asuransi-kesehatan.jpg" class="card-img-top" alt="Product 1" style="height: 300px; object-fit: cover;">
-            <div class="card-body">
-            <h5 class="card-title">Asuransi Kesehatan</h5>
-            <p class="card-text">Lindungi kesehatan Anda dan keluarga dengan perlindungan rawat inap, rawat jalan, dan penyakit kritis. Nikmati layanan medis terbaik dengan proses klaim mudah dan biaya terjangkau.</p>
-            <a href="{{url('/kesehatan')}}" class="btn btn-primary">Learn More</a>
-            </div>
+    <div class="chat-container" style="position: absolute; top: 200px; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 500px;">
+
+        <h3 class="text-center">Chat with JRP Bot</h3>
+        <div class="chat-box" id="chatBox">
+            <!-- Chat messages will appear here -->
         </div>
-        </div>
-        <div class="col-md-6 mb-4">
-        <div class="card h-100" style="width: 100%; max-width: 100%; height: 400px;">
-            <img src="assets/img/asuransi-kecelakaan.jpg" class="card-img-top" alt="Product 2" style="height: 300px; object-fit: cover;">
-            <div class="card-body">
-            <h5 class="card-title">Asuransi Kecelakaan</h5>
-            <p class="card-text">Perlindungan finansial terhadap kecelakaan, termasuk biaya pengobatan, kecacatan, dan santunan meninggal dunia. Cepat dan mudah klaimnya saat dibutuhkan.</p>
-            <a href="{{url('/kecelakaan')}}" class="btn btn-primary">Learn More</a>
-            </div>
-        </div>
+        <div class="input-area">
+            <input type="text" id="userMessage" placeholder="Type a message..." />
+            <button id="sendMessage">Send</button>
         </div>
     </div>
     
@@ -163,6 +197,63 @@
       <script src="{{asset('/')}}libs/apexcharts/dist/apexcharts.min.js"></script>
       <script src="{{asset('/')}}libs/simplebar/dist/simplebar.js"></script>
       <script src="{{asset('/')}}js/dashboard.js"></script>
+      <script>
+        $(document).ready(function () {
+            // Send message to the server
+            $('#sendMessage').click(function () {
+                var userMessage = $('#userMessage').val();
+                if (userMessage) {
+                    // Add the user message to the chat box
+                    $('#chatBox').append('<div class="message user"><div class="text">' + userMessage + '</div></div>');
+                    $('#userMessage').val(''); // Clear input field
+
+                    // Scroll to the bottom
+                    $('#chatBox').scrollTop($('#chatBox')[0].scrollHeight);
+
+                    // Send the message to the backend using AJAX
+                    $.ajax({
+                        url: '{{ url("/chat/send") }}',
+                        method: 'POST',
+                        data: {
+                            message: userMessage,
+                            _token: '{{ csrf_token() }}'
+                        },
+                        success: function (response) {
+                            // Check if the response contains the expected 'message' key
+                            if (response.message) {
+                                // Add bot's response, formatted with HTML
+                                $('#chatBox').append('<div class="message bot"><div class="text">' + formatBotMessage(response.message) + '</div></div>');
+                            } else {
+                                // Handle unexpected response structure
+                                $('#chatBox').append('<div class="message bot"><div class="text">Sorry, I encountered an error processing your request.</div></div>');
+                            }
+                            $('#chatBox').scrollTop($('#chatBox')[0].scrollHeight); // Scroll to the bottom
+                        },
+                        error: function () {
+                            $('#chatBox').append('<div class="message bot"><div class="text">Oops! There was an error connecting to the server.</div></div>');
+                            $('#chatBox').scrollTop($('#chatBox')[0].scrollHeight);
+                        }
+                    });
+
+                    // Format bot message (Prettify)
+                    function formatBotMessage(message) {
+                        return message
+                            .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') // Convert **bold** to <strong>
+                            .replace(/\*(.*?)\*/g, '<em>$1</em>') // Convert *italic* to <em>
+                            .replace(/\n/g, '<br>'); // Convert newlines to <br>
+                    }
+
+                }
+            });
+
+            // Enable enter key to send message
+            $('#userMessage').keypress(function (e) {
+                if (e.which === 13) {
+                    $('#sendMessage').click();
+                }
+            });
+        });
+    </script>
     </div>
   </div>
 </body>

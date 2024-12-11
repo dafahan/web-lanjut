@@ -109,6 +109,14 @@
                 <span class="hide-menu">Status Pengajuan</span>
               </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{url('chat')}}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Chat With JRP Bot</span>
+                </a>
+              </li>
           </ul>
         </nav>
       </div>

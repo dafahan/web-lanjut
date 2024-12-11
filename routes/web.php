@@ -9,6 +9,8 @@ use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\PostController;
 use App\Http\Middleware\CheckRole;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ChatBotController;
+
 
 
 /*
@@ -92,6 +94,8 @@ Route::post('storevisi', [PostController::class, 'storeVisi'])->name('storevisi'
 Route::get('detailvisi/{id}', [PostController::class, 'detailvisi'])->name('detailvisi')->middleware('auth');
 Route::get('editvisi/{id}', [PostController::class, 'editVisi'])->name('editvisi')->middleware('auth');
 Route::put('updatevisi/{id}', [PostController::class, 'updateVisi'])->name('updatevisi')->middleware('auth');
+Route::get('/chat', [ChatBotController::class, 'showChat']);
+Route::post('/chat/send', [ChatBotController::class, 'sendMessage']);
 
 //MISI
 Route::get('misiadmin', [PostController::class, 'viewMisi'])->name('misiadmin')->middleware('auth');
