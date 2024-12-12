@@ -98,6 +98,14 @@
                 <span class="hide-menu">Struktur</span>
               </a>
             </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="{{url('verifikasi-pengajuan')}}" aria-expanded="false">
+                  <span>
+                    <i class="ti ti-layout-dashboard"></i>
+                  </span>
+                  <span class="hide-menu">Verifikasi Pengajuan</span>
+                </a>
+              </li>
         </ul>
             
         </nav>
